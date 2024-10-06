@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+string kategoriUsia(int umur) {
+    if (umur < 0) {
+        return "Umur tidak valid";
+    } else if (umur <= 12) {
+        return "Anak-anak";
+    } else if (umur <= 17) {
+        return "Remaja";
+    } else if (umur <= 59) {
+        return "Dewasa";
+    } else {
+        return "Lansia";
+    }
+}
+
+int main() {
+    int umur;
+    cout << "Masukkan umur: ";
+    cin >> umur;
+
+    string kategori = kategoriUsia(umur);
+    cout << "Kategori usia: " << kategori << endl;
+
+    return 0;
+}
